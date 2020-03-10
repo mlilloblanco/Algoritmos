@@ -35,8 +35,9 @@ public class Capicua {
 		int numInvertido = 0;
 		boolean esCapicua;
 
+		//se realiza un bucle dividiendo el numero en 10 hasta que el numero ya no sea mayor a 1
 		do {
-
+			//se invierte el numero multiplicando el numero existente en 10 y agregandole el resto
 			numInvertido = numInvertido * 10 + numRestante % 10;
 			numRestante = numRestante / 10;
 
