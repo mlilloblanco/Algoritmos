@@ -12,7 +12,7 @@ public class Utilidades {
 			entero = pedirEntero(scanner);
 
 			if (entero < limiteInferior || entero > limiteSuperior)
-				System.err.print(String.format("Ingrese un año entre %d y %d", limiteInferior, limiteSuperior));
+				System.err.print(String.format("Ingrese un valor entre %d y %d", limiteInferior, limiteSuperior));
 		} while (entero < limiteInferior || entero > limiteSuperior);
 
 		return entero;
