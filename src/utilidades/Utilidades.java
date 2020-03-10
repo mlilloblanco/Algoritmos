@@ -24,7 +24,7 @@ public class Utilidades {
 			System.err.print("Ingrese un numero por favor" + ": ");
 			scanner.next();
 			
-			/* si agregan mas un de una linea con este comando no eviara dos veces el mensaje de error*/
+			/* si agregan mas un de una linea con este comando no enviara dos veces el mensaje de error*/
 			if (scanner.hasNextLine()) {
 				scanner.nextLine();
 			}
@@ -39,7 +39,7 @@ public class Utilidades {
 			System.err.print("Ingrese un caracter valido s o n: ");
 			scanner.next();
 			
-			/* si agregan mas un de una linea con este comando no eviara dos veces el mensaje de error*/
+			/* si agregan mas un de una linea con este comando no enviara dos veces el mensaje de error*/
 			if (scanner.hasNextLine()) {
 				scanner.nextLine();
 			}
