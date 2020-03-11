@@ -36,7 +36,6 @@ public class Palindromo {
 
 	public static boolean esPalindromo(String texto) {
 
-		boolean esPalindromo;
 		// se quitan espacios,puntos y comas. Ademas se reemplazan espacios
 		String textoCorregido = texto.replace("á", "a").replace("é", "e").replace("í", "i").replace("ó", "o").replace("ú", "u").replace("ü", "u").replace(" ", "")
 				.replace(".", "").replace(",", "");
@@ -45,11 +44,9 @@ public class Palindromo {
 		String textoInvertido = new StringBuilder(textoCorregido).reverse().toString();
 		
 		if (textoCorregido.equals(textoInvertido)) {
-			esPalindromo = true;
-			return esPalindromo;
+			return true;
 		} else {
-			esPalindromo = false;
-			return esPalindromo;
+			return false;
 		}
 	}
 }
