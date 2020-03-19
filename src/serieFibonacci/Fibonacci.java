@@ -25,11 +25,11 @@ public class Fibonacci {
 			num = Utilidades.pedirEntero(scanner, LIMITE_INFERIOR, LIMITE_SUPERIOR);
 			ArrayList<Integer> fibonacci = generarFibonacci(num);
 			if (num == 1) {
-				System.out.println("[" + fibonacci.get(0) + "]" );
+				System.out.println("[" + fibonacci.get(0) + "]");
 			} else if (num == 2) {
-				System.out.println("[" + fibonacci.get(0) + "," + fibonacci.get(1) + "]" );
+				System.out.println("[" + fibonacci.get(0) + "," + fibonacci.get(1) + "]");
 			} else
-			System.out.println(fibonacci);
+				System.out.println(fibonacci);
 
 			System.out.println("Desea generar la serie de Fibonacci con otra longitud? (s/n)");
 			opcion = Utilidades.pedirContinuar(scanner);
@@ -43,22 +43,22 @@ public class Fibonacci {
 	public static ArrayList<Integer> generarFibonacci(int num) {
 
 		ArrayList<Integer> fibonacci = new ArrayList<Integer>();
-		
+
 		fibonacci.add(FIBONACCI_0);
 		fibonacci.add(FIBONACCI_1);
-		
+
 		int suma = 0;
 		int aux1 = FIBONACCI_0;
 		int aux2 = FIBONACCI_1;
 		int i = 2;
 		do {
-			
+
 			suma = aux1 + aux2;
 			fibonacci.add(suma);
 			aux1 = aux2;
 			aux2 = suma;
 			i += 1;
-		} while (i <num);
+		} while (i < num);
 		return fibonacci;
 	}
 }
