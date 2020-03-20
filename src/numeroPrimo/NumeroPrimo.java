@@ -28,7 +28,7 @@ public class NumeroPrimo {
 				System.out.println("El numero " + num + " NO es primo");
 			}
 
-			System.out.println("Desea consultar otro año? (s/n)");
+			System.out.println("Desea consultar otro numero? (s/n)");
 			opcion = Utilidades.pedirContinuar(scanner);
 
 		} while (opcion.equals(CHARACTER_VALIDO_TRUE));
