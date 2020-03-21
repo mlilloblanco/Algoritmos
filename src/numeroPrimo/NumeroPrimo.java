@@ -24,8 +24,10 @@ public class NumeroPrimo {
 
 			if (comprobarPrimo(num)) {
 				System.out.println("El numero " + num + " es primo");
+				System.out.println(generarPrimos(num));
 			} else {
 				System.out.println("El numero " + num + " NO es primo");
+				System.out.println(generarPrimos(num));
 			}
 
 			System.out.println("Desea consultar otro numero? (s/n)");
@@ -37,34 +39,39 @@ public class NumeroPrimo {
 	}
 
 	public static boolean comprobarPrimo(int num) {
-		int contador = 0;
-		for (int i = 1; i <= num; i++) {
 
-			if (num % i == 0) {
-				contador++;
-			}
-		}
-
-		if (contador == 2) {
-			return true;
-		} else {
+		if (num < 2) {
 			return false;
+		} else if (num == 2) {
+			return true;
+		} else if (num % 2 == 0) {
+			return false;
+		} else {
+			for (int i = 3; i <= Math.sqrt(num); i += 2) {
+
+				if (num % i == 0) {
+					return false;
+				}
+			}
+			return true;
 		}
 	}
 
 	public static ArrayList<Integer> generarPrimos(int num) {
 		int contador;
 		ArrayList<Integer> primos = new ArrayList<Integer>();
-
-		for (int i = 1; i <= num; i++) {
+		if (num >= 2) {
+			primos.add(2);
+		}
+		for (int i = 3; i <= num; i += 2) {
 			contador = 0;
-			for (int j = 1; j <= i; j++) {
+			for (int j = 3; j <= Math.sqrt(i); j += 2) {
 				if (i % j == 0) {
 					contador++;
 				}
 			}
 
-			if (contador == 2) {
+			if (contador == 0) {
 				primos.add(i);
 			}
 		}
